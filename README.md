@@ -10,7 +10,6 @@ This project is to continue maintaining https://github.com/kevinngo19/alexa_back
 
 Most likely you do not have PyAudio installed, refer to the image below:
 
-
 ## Installation
 
 ## Authors and Contributors
