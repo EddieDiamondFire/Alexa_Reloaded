@@ -4,4 +4,14 @@ This project is to continue maintaining https://github.com/kevinngo19/alexa_back
 
 **This repository is under rewrite**
 
+## FAQ
+
+> Help! There is an error with PyAudio
+
+Most likely you do not have PyAudio installed, 
+
+## Installation
+
+## Authors and Contributors
+
 
