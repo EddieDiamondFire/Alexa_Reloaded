@@ -1,4 +1,5 @@
 import speech_recognition as sr
+from common import speech_engine as se
 
 microphone = sr.Microphone()
 recogniser = sr.Recognizer()
@@ -14,26 +15,14 @@ def start_alexa_program():
 
 def end_alexa_program():
     print("")
+    print("Stopping session")
+    exit()
 
 
 def run_alexa():
+    print("")
+
 
 def voice_command():
-    try:
-        with microphone as origin:
-            r = recogniser
-            audio = r.listen(origin)
-            translate = r.recognize_google(audio)
 
-            print("You said " + str(translate))
-            translate = translate.lower()
-
-            if 'alexa' in translate:
-                translate = translate.replace('alexa', '')
-                return translate
-    except sr.UnknownValueError:
-        print("Sorry I could not recognise your voice")
-        run_alexa()
-
-
-
+        
