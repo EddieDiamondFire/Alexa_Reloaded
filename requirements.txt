@@ -1,13 +1,7 @@
-<<<<<<< Updated upstream
 pyttsx3==2.90
 toml==0.10.2
 cffi==1.14.5
 pycparser==2.20
 PyNaCl==1.4.0
 six==1.15.0
-SpeechRecognition==3.8.1
-=======
-pyttsx3==2.90
-toml==0.10.2
->>>>>>> Stashed changes
 SpeechRecognition==3.8.1
