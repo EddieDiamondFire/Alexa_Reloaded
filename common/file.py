@@ -1,5 +1,6 @@
 import toml
 from pathlib import Path
+import utils
 
 
 def get_project_root() -> Path:
@@ -8,4 +9,9 @@ def get_project_root() -> Path:
 
 def config_load():
     path_project_root = str(get_project_root())
-    return toml.load(path_project_root + "\\config\\config.toml")
+
+    platform = utils.get_platform()
+    if platform == 'Linux':
+        return toml.load(path_project_root + "/config/config.toml")
+    elif platform == 'Windows':
+        return toml.load(path_project_root + "\\config\\config.toml")
