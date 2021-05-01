@@ -1,32 +1,23 @@
 import alexa
 import sys
 from common import utils as u
+from common import file
 
-print("Debug?: ")
-debug = input()
+config_file = file.config_load()
 
-while True:
-    if debug == "False":
-        debug_mode = False
-        break
-    elif debug == "True":
-        debug = True
+
+def debug_mode():
+    if config_file["general"].get("debug_mode"):
+        print("Debug mode is enabled!")
+        return True
+    elif config_file["general"].get("debug_mode"):
+        return False
     else:
-        print("Please say if you want debug mode on...")
-
-        print("Debug?: ")
-        debug = input()
-        if debug == "False":
-            debug_mode = False
-            break
-        elif debug == "True":
-            debug = True
-        else:
-            print("Please say if you want debug mode on...")
+        return False
 
 
 def debug_message(package_name, message):
-    if debug_mode:
+    if debug_mode():
         u.print_version(package_name, message)
 
 
